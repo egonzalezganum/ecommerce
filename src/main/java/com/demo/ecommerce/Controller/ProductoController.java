@@ -11,6 +11,6 @@ public class ProductoController {
 	@GetMapping("")
 	public String show() {
 		return "productos/show";
-	}
+	}	
 	
 }
