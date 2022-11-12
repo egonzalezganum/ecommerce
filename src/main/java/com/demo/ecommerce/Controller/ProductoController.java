@@ -83,7 +83,7 @@ public class ProductoController {
 
 			// eliminar cuando no sea la imagen por defecto
 
-			if (p.getImagen().equals("default.jpg")) {
+			if (!p.getImagen().equals("default.jpg")) {
 
 				upload.deleteImage(p.getImagen());
 			}
@@ -91,6 +91,8 @@ public class ProductoController {
 			String nombreImg = upload.saveImage(file);
 			producto.setImagen(nombreImg);
 		}
+		
+		producto.setUsuario(p.getUsuario());
 		
 		productoService.update(producto);
 		return "redirect:/productos";
