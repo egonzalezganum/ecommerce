@@ -34,9 +34,26 @@ public class Usuario {
 	public Usuario() {
 	}
 
+
+	
+	public Usuario(Integer id, String nombre, String user, String mail, String direccion, String telefono, String tipo,
+			String password) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.user = user;
+		this.mail = mail;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.tipo = tipo;
+		this.password = password;
+	}
+
+
+
 	public Usuario(Integer id, String nombre, String user, String mail, String direccion, String telefono, String tipo,
 			String password, List<Producto> productos, List<Orden> ordenes) {
-		super();
+//		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.user = user;
