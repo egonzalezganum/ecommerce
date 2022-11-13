@@ -11,7 +11,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "usuarios")//con este nombre se crea la tabla
+@Table(name = "usuarios") // con este nombre se crea la tabla
 public class Usuario {
 
 	@Id
@@ -34,8 +34,6 @@ public class Usuario {
 	public Usuario() {
 	}
 
-
-	
 	public Usuario(Integer id, String nombre, String user, String mail, String direccion, String telefono, String tipo,
 			String password) {
 		super();
@@ -48,8 +46,6 @@ public class Usuario {
 		this.tipo = tipo;
 		this.password = password;
 	}
-
-
 
 	public Usuario(Integer id, String nombre, String user, String mail, String direccion, String telefono, String tipo,
 			String password, List<Producto> productos, List<Orden> ordenes) {

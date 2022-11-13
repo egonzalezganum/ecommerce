@@ -35,11 +35,10 @@ public class ProductoServiceImp implements ProductoService {
 	public void delete(Integer id) {
 		productoRepository.deleteById(id);
 	}
+
 	@Override
 	public List<Producto> findAll() {
 		return productoRepository.findAll();
 	}
-
-	
 
 }

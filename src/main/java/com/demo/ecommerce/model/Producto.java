@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.ManyToAny;
 
 @Entity
-@Table(name = "productos")//con este nombre se crea la tabla
+@Table(name = "productos") // con este nombre se crea la tabla
 public class Producto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,12 +20,12 @@ public class Producto {
 	private String imagen;
 	private double precio;
 	private int cantidad;
-	
+
 	@ManyToOne
 	private Usuario usuario;
 
 	public Producto() {
-	}	
+	}
 
 	public Producto(Integer id, String nombre, String descripcion, String imagen, double precio, int cantidad,
 			Usuario usuario) {
@@ -94,8 +94,6 @@ public class Producto {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
-	
 
 	@Override
 	public String toString() {

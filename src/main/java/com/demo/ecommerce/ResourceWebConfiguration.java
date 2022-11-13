@@ -6,7 +6,6 @@ package com.demo.ecommerce;
  * hacia esa url
  */
 
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -21,8 +20,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class ResourceWebConfiguration implements WebMvcConfigurer {
 
 	/*
-	 * en los () del .addResourceHandler ponemos la cadena que es la ruta donde va a tomar todo lo que hay en el directorio
-	 * en el .addResourceLocations es la ubicacion hacia donde deberia apuntar
+	 * en los () del .addResourceHandler ponemos la cadena que es la ruta donde va a
+	 * tomar todo lo que hay en el directorio en el .addResourceLocations es la
+	 * ubicacion hacia donde deberia apuntar
 	 */
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {

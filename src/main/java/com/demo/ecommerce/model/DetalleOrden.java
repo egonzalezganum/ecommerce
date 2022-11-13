@@ -9,7 +9,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "detalles")//con este nombre se crea la tabla
+@Table(name = "detalles") // con este nombre se crea la tabla
 public class DetalleOrden {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,16 +18,16 @@ public class DetalleOrden {
 	private double cantidad;
 	private double precio;
 	private double total;
-	
+
 	@OneToOne
 	private Orden orden;
 
 	@ManyToOne
 	private Producto producto;
-	
+
 	public DetalleOrden() {
 	}
-	
+
 	public DetalleOrden(Integer id, String nombre, double cantidad, double precio, double total, Orden orden,
 			Producto producto) {
 		super();
@@ -80,8 +80,6 @@ public class DetalleOrden {
 		this.total = total;
 	}
 
-	
-	
 	public Orden getOrden() {
 		return orden;
 	}
