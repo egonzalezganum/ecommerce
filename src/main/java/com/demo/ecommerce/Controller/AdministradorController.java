@@ -17,17 +17,16 @@ public class AdministradorController {
 
 	@Autowired
 	private ProductoService productoService;
-	
+
 	@GetMapping("")
 	public String home(Model model) {
-		
+
 		List<Producto> productos = productoService.findAll();
-		
-		model.addAttribute("productos",productos);
-		
+
+		model.addAttribute("productos", productos);
+
 		return "administrador/home.html";
 	}
-	
 
 	
 	

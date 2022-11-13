@@ -74,11 +74,11 @@ public class ProductoController {
 
 		Producto p = new Producto();
 		p = productoService.get(producto.getId()).get();
-		
+
 		if (file.isEmpty()) { // editamos el producto pero no cambiamos la imagen
 
 			producto.setImagen(p.getImagen());
-		
+
 		} else {// editamos el producto y cambiamos la imagen
 
 			// eliminar cuando no sea la imagen por defecto
@@ -91,9 +91,9 @@ public class ProductoController {
 			String nombreImg = upload.saveImage(file);
 			producto.setImagen(nombreImg);
 		}
-		
+
 		producto.setUsuario(p.getUsuario());
-		
+
 		productoService.update(producto);
 		return "redirect:/productos";
 	}
