@@ -83,7 +83,7 @@ public class ProductoController {
 
 			// eliminar cuando no sea la imagen por defecto
 
-			if (!p.getImagen().equals("default.jpg")) {
+			if (p.getImagen().equals("default.jpg")) {
 
 				upload.deleteImage(p.getImagen());
 			}

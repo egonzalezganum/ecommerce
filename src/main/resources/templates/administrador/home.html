@@ -12,16 +12,16 @@
 
 
 	<!-- Bootstrap core CSS -->
-	<link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link th:href="@{css/heroic-features.css}" rel="stylesheet">
+	<link th:href="@{/css/heroic-features.css}" rel="stylesheet">
 
 </head>
 
 <body>
 
-	<div th:replace="fragments/fragments.html :: header"></div>
+	<div th:replace="fragments/fragments.html :: header_admin"></div>
 
 	<!-- Page Content -->
 	<div class="container">
@@ -54,11 +54,11 @@
 
     <!-- Footer -->
 
-	<div th:replace="fragments/fragments.html :: footer"></div>
+	<div th:replace="fragments/fragments.html :: footer_admin"></div>
 
 	<!-- Bootstrap core JavaScript -->
-	<script th:src="@{vendor/jquery/jquery.min.js}"></script>
-	<script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
 
 </body>
 

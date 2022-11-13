@@ -1,16 +1,23 @@
 package com.demo.ecommerce.Controller;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.demo.ecommerce.Service.ProductoService;
 
 @Controller
 @RequestMapping("/")
 public class HomeController {
+	
+	private final Logger log = LoggerFactory.getLogger(HomeController.class);
 
 	@Autowired
 	private ProductoService productoService;
@@ -23,6 +30,12 @@ public class HomeController {
 		return "usuario/home";
 	}
 	
+	
+	@GetMapping("/productohome/{id}")
+	public String productoHome(@PathVariable Integer id) {//PathVariable identifica que el id lo toma desde la url
+		log.info("id enviado como parametro {} ",id);
+		return "usuario/productohome";
+	}
 	
 	
 	
