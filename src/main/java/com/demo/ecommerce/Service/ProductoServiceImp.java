@@ -6,14 +6,14 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.demo.ecommerce.Repository.ProductoRepository;
+import com.demo.ecommerce.Repository.IProductoRepository;
 import com.demo.ecommerce.model.Producto;
 
 @Service
 public class ProductoServiceImp implements ProductoService {
 
 	@Autowired
-	private ProductoRepository productoRepository;
+	private IProductoRepository productoRepository;
 
 	@Override
 	public Producto save(Producto producto) {
